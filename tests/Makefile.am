@@ -71,6 +71,8 @@ dist_braille_specs_TESTS =				  \
 	braille-specs/ar-ar-g1.yaml			  \
 	braille-specs/ar-ar-g1_harness.yaml		  \
 	braille-specs/ar-ar-g2.yaml			  \
+	braille-specs/ba.yaml				  \
+	braille-specs/bel.yaml				  \
 	braille-specs/chr-us-g1_harness.yaml		  \
 	braille-specs/cop-eg.yaml			  \
 	braille-specs/cs_harness.yaml			  \
@@ -93,6 +95,7 @@ dist_braille_specs_TESTS =				  \
 	braille-specs/de-ch-g2-dictionary.yaml		  \
 	braille-specs/de-ch-g1.yaml			  \
 	braille-specs/de-de-comp8.yaml 			  \
+	braille-specs/de-emphasis.yaml 			  \
 	braille-specs/de-eurobrl6.yaml			  \
 	braille-specs/de-g0-bidi-dictionary.yaml	  \
 	braille-specs/de-g0-bidi-specs.yaml		  \
@@ -174,9 +177,8 @@ dist_braille_specs_TESTS =				  \
 	braille-specs/no_g2_harness.yaml		  \
 	braille-specs/no_harness.yaml			  \
 	braille-specs/no_typeform_harness.yaml		  \
+	braille-specs/pl-g1.yaml			  \
 	braille-specs/pl-pl-comp8_harness.yaml		  \
-	braille-specs/Pl-Pl-g1_backward.yaml		  \
-	braille-specs/Pl-Pl-g1_harness.yaml		  \
 	braille-specs/pt-g1.yaml			  \
 	braille-specs/sk-g1_harness.yaml		  \
 	braille-specs/ru.yaml				  \

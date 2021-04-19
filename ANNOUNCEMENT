@@ -1,7 +1,7 @@
-liblouis 3.15.0 has been released
+liblouis 3.17.0 has been released
 
 The liblouis developer team is proud to announce the liblouis release
-3.15.0. The release is available for download at:
+3.17.0. The release is available for download at:
 
 https://github.com/liblouis/liblouis/releases
 
@@ -18,86 +18,65 @@ liblouisutdml [2]_ deals with formatting of braille.
 Noteworthy changes in this release
 ==================================
 
-This release contains updates to the Afrikaans, Malayalam, Malay,
-Israeli, classical English and Portuguese tables. It also contains a new
-table for Coptic thanks to first-time contributor Ibraam Nasif. Behind
-the scenes there have been major changes to the cross-compilation
-tool-chain that will finally allow us to ship pre-built windows binaries
-that contain ``lou_checkyaml.exe``.
+This release stands in the tradition of small incremental improvements
+that make it another fine and solid release. Andrey Yakuboy put in a lot
+of work to improve Russian literary and computer braille. He also
+provided a new table for Belarusian uncontracted and computer braille.
+Aside from that there are numerous improvements in Braille tables such
+as French, Polish and Urdu. The documentation has been improved as has
+the table meta marking the tables whether they are geared towards
+forward or backwards translation. I'd like to thank everybody for
+helping to bring liblouis forward.
 
 For a detailed list of all the changes refer to the list of closed
 issues [3]_.
 
-New features
-------------
-
-None
-
-Bug fixes
----------
-
-None
-
 Braille table improvements
 --------------------------
 
--  New computer braille table for the Coptic language thanks to Ibraam
-   Nasif
--  Improvements to Afrikaans thanks to Christo de Klerk
+-  The backtranslation of æ in French 6 dot braille has been fixed
+   thanks to André-Abush Clause.
+-  The definition of the vertical line symbol (|) in the Russian
+   computer braille table was corrected thanks to Andrey Yakuboy.
+-  Improvements to the Russian literary braille thanks to Andrey
+   Yakuboy:
 
-   -  Fixed correct handling of the ŉ character (0x149)
-   -  Prevent contraction of
+   -  Letters which are used in Old-Russian texts were added.
+   -  Arrows, integrals and other symbols were added.
+   -  the horizontal bar symbol (u+2015) was added and marked as a
+      dash-symbol.
+   -  Now accent marks are put before a letter according to the Russian
+      braille rules.
+   -  Many bugs with processing space-symbols were fixed.
+   -  Improvements to processing dialogs and direct speech.
+   -  Improvements to processing letters of different alphabets.
 
-      -  &quot;self&quot; in &quot;selfoon&quot;, &quot;selfone&quot;,
-      -  &quot;ui&quot; in words and names like &quot;quisling&quot;,
-         &quot;quidproquo&quot;, &quot;quiëtis&quot;,
-         &quot;Quinten&quot;, &quot;Quintus&quot;,
-      -  &quot;er&quot; in words like &quot;konstituering&quot;.
+-  New tables for Belarusian uncontracted and computer braille thanks to
+   Andrey Yakuboy.
+-  Various fixes to Polish tables thanks to Łukasz Golonka:
 
--  Improved table for Malayalam grade 1 thanks to Jake Kyle.
+   -  Add em dash to both computer and literary Polish tables
+   -  Remove some definitions which made it impossible to back translate
+      quoted strings from the Grade 1 table
+   -  Fix back translation of capital M and add tests for back
+      translation of all Latin capital letters for Grade 1 table
 
-   -  Fixed rules for Candrakkala character at the end of a word.
-   -  Fixed rules for letters ര മ ങ in certain contexts.
-   -  Improved back-translation.
+-  Update to Urdu thanks to Jake Kyle:
 
--  Improvements to grade 2 Malay braille thanks to Herbert Koh.
--  Improvements to Israeli 6-dot thanks to BAUM Engineering.
-
-   -  Fixed number sign for Arabic digits.
-   -  Fixed Hebrew letters with dagesh.
-
--  Added bullets to the classical English tables, thanks to Bue
-   Vester-Andersen
--  Improved Portuguese grade 1 thanks to Bue Vester-Andersen.
-
-   -  Fixed forward translation of &amp;, &lt;, &gt;, \`, ¶ and '.
-   -  Improved back-translation. The table is now tagged as going both
-      forward and backward.
-   -  Added missing square root sign.
+   -  Revised definitions of SUPERSCRIPT ALEF and ARABIC LIGATURE ALLAH
+      ISOLATED FORM.
+   -  Changed contractions of ٹھ, ان, اِن, بے, بی, اَور and اور.
+   -  Dots 3-3 used for repeated words instead of 6-6.
 
 Other changes
 -------------
 
-None
-
-Deprecation notice
-------------------
-
-None
-
-Backwards incompatible changes
-------------------------------
-
-None
-
-Invisible changes
------------------
-
--  Major rework of the cross-compilation tool-chain. There are now
-   Docker images that should allow for local builds of binaries for 32
-   and 64 bit. These include the libyaml library so the binaries contain
-   ``lou_checkyaml.exe``. This will allow table creators to test their
-   changes locally under windows.
+-  Fixed some valgrind issues thanks to André-Abush Clause.
+-  Improve the documentation of *caps* opcodes thanks to Bue
+   Vester-Andersen.
+-  Add meta data to all tables indicating whether a table is geared
+   towards forward or backwards translation or both. Again thanks to Bue
+   Vester-Andersen.
 
 New, renamed or removed tables
 ------------------------------
@@ -105,7 +84,8 @@ New, renamed or removed tables
 New
 ~~~
 
--  cop-eg-comp8.utb
+-  bel.utb
+-  bel-comp.utb
 
 Renamed
 ~~~~~~~
@@ -120,8 +100,8 @@ None
 Next release
 ============
 
-The next release will be published on November 30 2020 so please keep up
-the excellent work and keep those improvements coming.
+The next release will be published on June 7 2021 so please keep up the
+excellent work and keep those improvements coming.
 
 Share and Enjoy!
 
@@ -137,4 +117,4 @@ Footnotes
    https://github.com/liblouis/liblouisutdml
 
 .. [3]
-   https://github.com/liblouis/liblouis/milestone/25?closed=1
+   https://github.com/liblouis/liblouis/milestone/27?closed=1

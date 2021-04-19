@@ -5,6 +5,9 @@
 * ../../tables/ar-ar-comp8.utb                   Arabic, computer                                   Arabic computer braille
 * ../../tables/as.tbl                            Assamese                                           Assamese braille
 * ../../tables/awa.tbl                           Awadhi                                             Awadhi braille
+* ../../tables/ba.utb                            Bashkir                                            Bashkir braille
+* ../../tables/bel.utb                           Belarusian                                         Belarusian braille
+* ../../tables/bel-comp.utb                      Belarusian, computer                               Belarusian computer braille
 * ../../tables/bg.tbl                            Bulgarian, computer                                Bulgarian computer braille
 * ../../tables/bh.tbl                            Bihari                                             Bihari braille
 * ../../tables/bn.tbl                            Bengali                                            Bengali braille
@@ -124,7 +127,8 @@
 * ../../tables/pt-pt-comp8.ctb                   Portuguese, computer                               Portuguese computer braille
 * ../../tables/ro.tbl                            Romanian, computer                                 Romanian computer braille
 * ../../tables/ru.ctb                            Russian, computer                                  Russian computer braille
-* ../../tables/ru.tbl                            Russian                                            Russian braille
+* ../../tables/ru-litbrl.ctb                     Russian                                            Russian braille
+  ../../tables/ru-litbrl-detailed.utb            Russian, with capitals                             Russian braille with indication of capitals
   ../../tables/ru-compbrl.ctb                    Russian, for program sources                       Russian braille for program sources
 * ../../tables/sa.tbl                            Sanskrit                                           Sanskrit braille
 * ../../tables/sd.tbl                            Sindhi                                             Sindhi braille
